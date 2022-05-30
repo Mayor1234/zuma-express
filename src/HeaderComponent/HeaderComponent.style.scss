@@ -1,0 +1,101 @@
+
+
+.row{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+nav{
+    background-color: #203040;
+    color: #f6f7f8;
+    a{
+        color: #f6f7f8;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    ul{
+        list-style-type: none;
+    }
+
+    .nav-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5rem 1rem;
+        
+       
+
+        .drop-down{
+            display: none;
+           position: relative;
+            
+            & li a{
+                text-transform: capitalize;
+            }
+
+            .drop-li{
+                padding: 1rem 0;
+            } 
+
+        }
+
+        
+
+        
+        li{
+            margin: 0 1rem;
+            
+            
+            .a-bottom{
+                font-weight: bold;
+                letter-spacing: .1rem;
+                color: #f6f7f8;
+                padding: .5rem 0;
+                cursor: pointer;
+                transition: border-bottom .2s ease-in;
+            }
+
+            .active-home{
+                border-bottom: 2px solid red;
+            }
+
+
+            .a-bottom:hover{
+               color: rgba(255, 0, 0, 0.687);
+            }
+
+            .icon{
+                padding-top: .3rem;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        }
+       
+        & li:hover .drop-down{
+            display: block;
+            position: absolute;
+            margin-top: 1.5vh;
+            background-color: #203040;
+            color: rgba(255, 0, 0, 0.687);
+            z-index: 1;
+        }
+
+        & li:hover .drop-down .drop-content{
+            display: block;
+            margin-top: 1.2vh;
+            color: rgba(255, 0, 0, 0.687);
+        }
+        .drop-content:hover{
+            color: rgba(255, 0, 0, 0.687);
+        }
+
+    }  
+
+}
+
+
